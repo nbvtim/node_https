@@ -3,7 +3,7 @@ let https = require('https')
 // https://translate.google.ru/?hl=ru&tab=rT&sl=en&tl=ru&text=live&op=translat
 // https://translate.yandex.ru/?lang=en-ru&text=live
 // https://nbvtim.github.io/site/
-let url = 'https://www.gismeteo.ru/weather-adler-5245/'
+let url = 'https://nbvtim.github.io/site/'
 
 // функция загружает удаленный URL
 
@@ -53,8 +53,15 @@ function readURL(url) {
 }
 readURL(url)
     .then(data =>
-        c(data) //.includes('live')
+        c(data.indexOf('li')) //.includes('live')
     )
     .catch(err =>
         console.log(err.message)
     )
+
+// текст в HTML
+// var text = '<div>тест</div>';
+// var div = document.createElement('div');
+// div.innerHTML = text;
+// var result = div.firstChild;
+// alert(result);
