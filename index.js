@@ -53,7 +53,7 @@ function readURL(url) {
 }
 readURL(url)
     .then(data =>
-        c(data.indexOf('li')) //.includes('live')
+        c(data.indexOf('li')) //.includes('live') 
     )
     .catch(err =>
         console.log(err.message)
